@@ -25,19 +25,38 @@
     .header {
       background: #003087;
       color: white;
-      padding: 30px 40px;
-      text-align: center;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      gap: 35px;
+      flex-wrap: wrap;
+    }
+    .header .foto-container {
+      flex-shrink: 0;
+    }
+    .foto {
+      width: 140px;
+      height: 180px;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .header .text-container {
+      flex: 1;
+      min-width: 280px;
     }
     .header h1 {
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: 1px;
+      margin: 0 0 8px 0;
+      font-size: 32px;
+      letter-spacing: 1.2px;
     }
     .header .titulo {
-      font-size: 16px;
-      margin-top: 8px;
+      font-size: 18px;
       font-weight: normal;
+      opacity: 0.95;
+      margin: 0;
     }
+
     .tabs {
       display: flex;
       background: #e9ecef;
@@ -88,7 +107,7 @@
     }
     h3 {
       color: #003087;
-      margin: 20px 0 10px;
+      margin: 28px 0 12px;
       border-bottom: 2px solid #003087;
       padding-bottom: 6px;
     }
@@ -99,30 +118,39 @@
     li {
       margin-bottom: 6px;
     }
-    .foto {
-      width: 140px;
-      height: 180px;
-      object-fit: cover;
-      border: 4px solid white;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      margin: 20px auto;
-      display: block;
+
+    @media (max-width: 680px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+      }
+      .header .foto {
+        margin: 0 auto 20px;
+      }
     }
+
     @media print {
       .tabs, .tab-button { display: none !important; }
       .tab-content { display: block !important; page-break-inside: avoid; }
       body { background: white; }
+      .header { padding: 20px; }
     }
   </style>
 </head>
 <body>
-
 <div class="container">
-
   <div class="header">
-    <img src="https://raw.githubusercontent.com/Adrianmoreno2005/curriculum/main/foto_perfil_catec.png" alt="Adrián Moreno" class="foto">
-    <h1>ADRIÁN MORENO MORENO</h1>
-    <div class="titulo">PROFESIONAL DE ADMINISTRACIÓN Y MANTENIMIENTO DE SISTEMAS</div>
+    <div class="foto-container">
+      <img 
+        src="https://raw.githubusercontent.com/Adrianmoreno2005/curriculum/main/foto_perfil_catec.png" 
+        alt="Adrián Moreno" 
+        class="foto">
+    </div>
+    <div class="text-container">
+      <h1>ADRIÁN MORENO MORENO</h1>
+      <div class="titulo">PROFESIONAL DE ADMINISTRACIÓN Y MANTENIMIENTO DE SISTEMAS</div>
+    </div>
   </div>
 
   <div class="tabs">
@@ -251,7 +279,6 @@
       <tr><td>• Ubuntu</td></tr>
     </table>
   </div>
-
 </div>
 
 <script>
@@ -269,6 +296,5 @@ function openTab(evt, tabName) {
   evt.currentTarget.classList.add("active");
 }
 </script>
-
 </body>
 </html>
