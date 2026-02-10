@@ -63,7 +63,7 @@
       margin: 0;
     }
 
-    /* Botón de descarga PDF */
+    /* Botón de descarga PDF - posicionado a la derecha */
     .download-pdf-btn {
       position: absolute;
       top: 30px;
@@ -77,13 +77,14 @@
       border-radius: 6px;
       cursor: pointer;
       text-decoration: none;
-      transition: all 0.2s;
+      transition: all 0.25s ease;
     }
 
     .download-pdf-btn:hover {
       background: rgba(255, 255, 255, 0.35);
       border-color: white;
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
     .download-pdf-btn:active {
@@ -131,12 +132,13 @@
       }
     }
 
-    /* Resto de estilos sin cambios */
+    /* Tabs y tablas */
     .tabs {
       display: flex;
       background: #e9ecef;
       border-bottom: 1px solid #ccc;
     }
+
     .tab-button {
       flex: 1;
       padding: 14px;
@@ -147,34 +149,47 @@
       border: none;
       transition: all 0.3s;
     }
-    .tab-button:hover { background: #d1d8e0; }
+
+    .tab-button:hover {
+      background: #d1d8e0;
+    }
+
     .tab-button.active {
       background: white;
       border-bottom: 3px solid #003087;
       color: #003087;
     }
+
     .tab-content {
       padding: 30px 40px;
       display: none;
     }
-    .tab-content.active { display: block; }
+
+    .tab-content.active {
+      display: block;
+    }
 
     table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px;
     }
+
     th, td {
       padding: 10px 12px;
       border: 1px solid #ddd;
       text-align: left;
     }
+
     th {
       background: #003087;
       color: white;
       font-weight: bold;
     }
-    tr:nth-child(even) { background: #f8f9fa; }
+
+    tr:nth-child(even) {
+      background: #f8f9fa;
+    }
 
     h3 {
       color: #003087;
@@ -189,6 +204,7 @@
       text-decoration: none;
       font-weight: bold;
     }
+
     .contact-link-table:hover {
       text-decoration: underline;
       color: #0055cc;
@@ -218,7 +234,7 @@
       <div class="titulo">PROFESIONAL DE ADMINISTRACIÓN Y MANTENIMIENTO DE SISTEMAS</div>
     </div>
 
-    <!-- Botón de descarga del PDF -->
+    <!-- Botón de descarga del PDF (enlace directo al raw de GitHub) -->
     <a href="https://github.com/Adrianmoreno2005/curriculum/raw/5c58cc48b5995d4dfb2ca3a74e5a5c6837a705d4/Curri%CC%81culum%20Adria%CC%81n%20Moreno%20Moreno.pdf"
        download="Currículum Adrián Moreno Moreno.pdf"
        class="download-pdf-btn">
@@ -240,11 +256,17 @@
       <tr><th>Nombre</th><td>ADRIÁN MORENO MORENO</td></tr>
       <tr>
         <th>Teléfono</th>
-        <td><a href="tel:+34635836593" class="contact-link-table">+34 635 836 593</a></td>
+        <td>
+          <a href="tel:+34635836593" class="contact-link-table">+34 635 836 593</a>
+        </td>
       </tr>
       <tr>
         <th>Correo electrónico</th>
-        <td><a href="mailto:adriaanmoreno005@gmail.com" class="contact-link-table">adriaanmoreno005@gmail.com</a></td>
+        <td>
+          <a href="mailto:adriaanmoreno005@gmail.com" class="contact-link-table">
+            adriaanmoreno005@gmail.com
+          </a>
+        </td>
       </tr>
     </table>
 
@@ -276,11 +298,88 @@
     </table>
   </div>
 
-  <!-- Resto de pestañas (sin cambios) -->
-  <div id="experiencia" class="tab-content">...</div>
-  <div id="formacion" class="tab-content">...</div>
-  <div id="aptitudes" class="tab-content">...</div>
+  <!-- Pestaña 2: Experiencia -->
+  <div id="experiencia" class="tab-content">
+    <h3>Experiencia Profesional</h3>
+    <table>
+      <tr>
+        <th>Puesto</th>
+        <th>Empresa / Lugar</th>
+        <th>Responsabilidades principales</th>
+      </tr>
+      <tr>
+        <td>Técnico de Sistemas y Redes</td>
+        <td>CATEC – Centro Avanzado de Tecnologías Aeroespaciales – Sevilla</td>
+        <td>
+          • Administración de red corporativa basada en Active Directory (AD)<br>
+          • Gestión avanzada de servicios DHCP, DNS, unión al dominio y políticas de grupo (GPO)<br>
+          • Soporte técnico nivel 1 y 2 (presencial y remoto) en hardware y software<br>
+          • Mantenimiento preventivo y correctivo de estaciones de trabajo, servidores y periféricos
+        </td>
+      </tr>
+      <tr>
+        <td>Técnico de reparación y soporte informático</td>
+        <td>BEEP Informática – Sevilla</td>
+        <td>
+          • Diagnóstico y reparación de equipos informáticos (PC, portátiles e impresoras) a nivel hardware y software<br>
+          • Instalación y configuración de sistemas operativos Windows y recuperación de datos<br>
+          • Atención al cliente, gestión de órdenes de reparación y control de stock<br>
+          • Organización administrativa y documentación de clientes
+        </td>
+      </tr>
+      <tr>
+        <td>Técnico informático y administrativo</td>
+        <td>R.P. Multiservicios – Sevilla</td>
+        <td>
+          • Diseño y mantenimiento de bases de datos en Microsoft Access<br>
+          • Creación de informes avanzados, tablas dinámicas y macros en Microsoft Excel<br>
+          • Elaboración de documentación profesional en Microsoft Word<br>
+          • Instalación y configuración de sistemas operativos Windows 7/10/11 y Ubuntu/Linux
+        </td>
+      </tr>
+    </table>
+  </div>
 
+  <!-- Pestaña 3: Formación -->
+  <div id="formacion" class="tab-content">
+    <h3>Formación Académica</h3>
+    <table>
+      <tr>
+        <th>Título</th>
+        <th>Centro</th>
+        <th>Año</th>
+      </tr>
+      <tr>
+        <td>Técnico Superior en Administración de Sistemas Informáticos en Red</td>
+        <td>I.E.S. Triana</td>
+        <td>2025</td>
+      </tr>
+      <tr>
+        <td>Técnico en Sistemas Microinformáticos y Redes</td>
+        <td>I.E.S. Alixar</td>
+        <td>2023</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Pestaña 4: Aptitudes -->
+  <div id="aptitudes" class="tab-content">
+    <h3>Aptitudes y Competencias</h3>
+    <table>
+      <tr><td>• Gestión de datos</td></tr>
+      <tr><td>• Escucha activa</td></tr>
+      <tr><td>• Agradable, amable y orientado al servicio</td></tr>
+      <tr><td>• Formación y orientación del personal</td></tr>
+      <tr><td>• Ayudar a los demás trabajadores</td></tr>
+      <tr><td>• Control de calidad</td></tr>
+      <tr><td>• Excelente comunicador, por escrito y oralmente</td></tr>
+      <tr><td>• Creatividad con las aplicaciones ofimáticas</td></tr>
+      <tr><td>• Word, Excel, PowerPoint</td></tr>
+      <tr><td>• Windows 7/10/11</td></tr>
+      <tr><td>• Active Directory (AD)</td></tr>
+      <tr><td>• Ubuntu</td></tr>
+    </table>
+  </div>
 </div>
 
 <script>
