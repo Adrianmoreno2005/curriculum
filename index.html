@@ -23,7 +23,7 @@
       overflow: hidden;
     }
 
-    /* Header - versión desktop (foto a la izquierda) */
+    /* Header */
     .header {
       background: #003087;
       color: white;
@@ -85,10 +85,6 @@
         font-size: 16px;
       }
 
-      .container {
-        padding: 0;
-      }
-
       body {
         padding: 12px;
       }
@@ -98,7 +94,7 @@
       }
     }
 
-    /* Tabs */
+    /* Tabs y tablas */
     .tabs {
       display: flex;
       background: #e9ecef;
@@ -165,35 +161,40 @@
       font-size: 18px;
     }
 
-    /* Estilo para el enlace de correo */
-    .email-link {
+    /* Estilo para enlaces de contacto */
+    .contact-link {
+      color: #e6f0ff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .contact-link:hover,
+    .contact-link:focus {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* En la tabla de datos personales (fondo blanco) */
+    .contact-link-table {
       color: #003087;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .email-link:hover {
+    .contact-link-table:hover {
       text-decoration: underline;
       color: #0055cc;
     }
 
-    ul {
-      padding-left: 20px;
-      margin: 8px 0;
-    }
-
-    li {
-      margin-bottom: 6px;
-    }
-
     @media print {
       .tabs, .tab-button { display: none !important; }
-      .tab-content { display: block !important; page-break-inside: avoid; }
+      .tab-content { display: block !important; }
       body { background: white; padding: 0; }
-      .header { padding: 20px; text-align: center; }
-      .header { flex-direction: column; }
+      .header { padding: 20px; text-align: center; flex-direction: column; }
       .foto { margin: 0 auto 15px; }
-      .email-link { color: #003087; text-decoration: underline; }
+      .contact-link { color: #003087; text-decoration: underline; }
+      .contact-link-table { color: #003087; text-decoration: underline; }
     }
   </style>
 </head>
@@ -224,11 +225,16 @@
     <h3>Datos Personales y Contacto</h3>
     <table>
       <tr><th>Nombre</th><td>ADRIÁN MORENO MORENO</td></tr>
-      <tr><th>Teléfono</th><td>+34 635 836 593</td></tr>
+      <tr>
+        <th>Teléfono</th>
+        <td>
+          <a href="tel:+34635836593" class="contact-link-table">+34 635 836 593</a>
+        </td>
+      </tr>
       <tr>
         <th>Correo electrónico</th>
         <td>
-          <a href="mailto:adriaanmoreno005@gmail.com" class="email-link">
+          <a href="mailto:adriaanmoreno005@gmail.com" class="contact-link-table">
             adriaanmoreno005@gmail.com
           </a>
         </td>
@@ -263,7 +269,7 @@
     </table>
   </div>
 
-  <!-- Pestaña 2: Experiencia -->
+  <!-- Resto de pestañas sin cambios -->
   <div id="experiencia" class="tab-content">
     <h3>Experiencia Profesional</h3>
     <table>
@@ -305,7 +311,6 @@
     </table>
   </div>
 
-  <!-- Pestaña 3: Formación -->
   <div id="formacion" class="tab-content">
     <h3>Formación Académica</h3>
     <table>
@@ -327,7 +332,6 @@
     </table>
   </div>
 
-  <!-- Pestaña 4: Aptitudes -->
   <div id="aptitudes" class="tab-content">
     <h3>Aptitudes y Competencias</h3>
     <table>
