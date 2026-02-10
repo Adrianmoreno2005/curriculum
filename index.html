@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Currículum - Adrián Moreno Moreno</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f5f7fa;
+      color: #333;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .header {
+      background: #003087;
+      color: white;
+      padding: 30px 40px;
+      text-align: center;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+    .header .titulo {
+      font-size: 16px;
+      margin-top: 8px;
+      font-weight: normal;
+    }
+    .tabs {
+      display: flex;
+      background: #e9ecef;
+      border-bottom: 1px solid #ccc;
+    }
+    .tab-button {
+      flex: 1;
+      padding: 14px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: bold;
+      background: #e9ecef;
+      border: none;
+      transition: all 0.3s;
+    }
+    .tab-button:hover {
+      background: #d1d8e0;
+    }
+    .tab-button.active {
+      background: white;
+      border-bottom: 3px solid #003087;
+      color: #003087;
+    }
+    .tab-content {
+      padding: 30px 40px;
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    th {
+      background: #003087;
+      color: white;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background: #f8f9fa;
+    }
+    h3 {
+      color: #003087;
+      margin: 20px 0 10px;
+      border-bottom: 2px solid #003087;
+      padding-bottom: 6px;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 8px 0;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .foto {
+      width: 140px;
+      height: 180px;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin: 20px auto;
+      display: block;
+    }
+    @media print {
+      .tabs, .tab-button { display: none !important; }
+      .tab-content { display: block !important; page-break-inside: avoid; }
+      body { background: white; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <!-- <img src="TU_FOTO_URL_O_RUTA.jpg" alt="Adrián Moreno" class="foto"> -->
+    <h1>ADRIÁN MORENO MORENO</h1>
+    <div class="titulo">PROFESIONAL DE ADMINISTRACIÓN Y MANTENIMIENTO DE SISTEMAS</div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-button active" onclick="openTab(event, 'personales')">Datos Personales</button>
+    <button class="tab-button" onclick="openTab(event, 'experiencia')">Experiencia</button>
+    <button class="tab-button" onclick="openTab(event, 'formacion')">Formación</button>
+    <button class="tab-button" onclick="openTab(event, 'aptitudes')">Aptitudes</button>
+  </div>
+
+  <!-- Pestaña 1: Datos Personales -->
+  <div id="personales" class="tab-content active">
+    <h3>Datos Personales y Contacto</h3>
+    <table>
+      <tr><th>Nombre</th><td>ADRIÁN MORENO MORENO</td></tr>
+      <tr><th>Teléfono</th><td>+34 635 836 593</td></tr>
+      <tr><th>Correo electrónico</th><td>adriaanmoreno005@gmail.com</td></tr>
+    </table>
+
+    <h3>Actividades e Intereses</h3>
+    <table>
+      <tr><td>• Word, Excel, PowerPoint</td></tr>
+      <tr><td>• Windows 7/10/11</td></tr>
+      <tr><td>• Active Directory (AD)</td></tr>
+      <tr><td>• Ubuntu</td></tr>
+    </table>
+
+    <h3>Competencias para el empleo</h3>
+    <table>
+      <tr><td>• Gestión de datos</td></tr>
+      <tr><td>• Escucha activa</td></tr>
+      <tr><td>• Agradable, amable y orientado al servicio</td></tr>
+      <tr><td>• Formación y orientación del personal</td></tr>
+      <tr><td>• Ayudar a los demás trabajadores</td></tr>
+      <tr><td>• Control de calidad</td></tr>
+      <tr><td>• Excelente comunicador, por escrito y oralmente</td></tr>
+      <tr><td>• Creatividad con las aplicaciones ofimáticas</td></tr>
+    </table>
+
+    <h3>Otros datos</h3>
+    <table>
+      <tr><td>• Permiso de conducir (B)</td></tr>
+      <tr><td>• Flexibilidad horaria</td></tr>
+      <tr><td>• Inscrito en el sistema de garantía juvenil</td></tr>
+    </table>
+  </div>
+
+  <!-- Pestaña 2: Experiencia -->
+  <div id="experiencia" class="tab-content">
+    <h3>Experiencia Profesional</h3>
+    <table>
+      <tr>
+        <th>Puesto</th>
+        <th>Empresa / Lugar</th>
+        <th>Responsabilidades principales</th>
+      </tr>
+      <tr>
+        <td>Técnico de Sistemas y Redes</td>
+        <td>CATEC – Centro Avanzado de Tecnologías Aeroespaciales – Sevilla</td>
+        <td>
+          • Administración de red corporativa basada en Active Directory (AD)<br>
+          • Gestión avanzada de servicios DHCP, DNS, unión al dominio y políticas de grupo (GPO)<br>
+          • Soporte técnico nivel 1 y 2 (presencial y remoto) en hardware y software<br>
+          • Mantenimiento preventivo y correctivo de estaciones de trabajo, servidores y periféricos
+        </td>
+      </tr>
+      <tr>
+        <td>Técnico de reparación y soporte informático</td>
+        <td>BEEP Informática – Sevilla</td>
+        <td>
+          • Diagnóstico y reparación de equipos informáticos (PC, portátiles e impresoras) a nivel hardware y software<br>
+          • Instalación y configuración de sistemas operativos Windows y recuperación de datos<br>
+          • Atención al cliente, gestión de órdenes de reparación y control de stock<br>
+          • Organización administrativa y documentación de clientes
+        </td>
+      </tr>
+      <tr>
+        <td>Técnico informático y administrativo</td>
+        <td>R.P. Multiservicios – Sevilla</td>
+        <td>
+          • Diseño y mantenimiento de bases de datos en Microsoft Access<br>
+          • Creación de informes avanzados, tablas dinámicas y macros en Microsoft Excel<br>
+          • Elaboración de documentación profesional en Microsoft Word<br>
+          • Instalación y configuración de sistemas operativos Windows 7/10/11 y Ubuntu/Linux
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Pestaña 3: Formación -->
+  <div id="formacion" class="tab-content">
+    <h3>Formación Académica</h3>
+    <table>
+      <tr>
+        <th>Título</th>
+        <th>Centro</th>
+        <th>Año</th>
+      </tr>
+      <tr>
+        <td>Técnico Superior en Administración de Sistemas Informáticos en Red</td>
+        <td>I.E.S. Triana</td>
+        <td>2025</td>
+      </tr>
+      <tr>
+        <td>Técnico en Sistemas Microinformáticos y Redes</td>
+        <td>I.E.S. Alixar</td>
+        <td>2023</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Pestaña 4: Aptitudes -->
+  <div id="aptitudes" class="tab-content">
+    <h3>Aptitudes y Competencias</h3>
+    <table>
+      <tr><td>• Gestión de datos</td></tr>
+      <tr><td>• Escucha activa</td></tr>
+      <tr><td>• Agradable, amable y orientado al servicio</td></tr>
+      <tr><td>• Formación y orientación del personal</td></tr>
+      <tr><td>• Ayudar a los demás trabajadores</td></tr>
+      <tr><td>• Control de calidad</td></tr>
+      <tr><td>• Excelente comunicador, por escrito y oralmente</td></tr>
+      <tr><td>• Creatividad con las aplicaciones ofimáticas</td></tr>
+      <tr><td>• Word, Excel, PowerPoint</td></tr>
+      <tr><td>• Windows 7/10/11</td></tr>
+      <tr><td>• Active Directory (AD)</td></tr>
+      <tr><td>• Ubuntu</td></tr>
+    </table>
+  </div>
+
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tabbuttons;
+  tabcontent = document.getElementsByClassName("tab-content");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].classList.remove("active");
+  }
+  tabbuttons = document.getElementsByClassName("tab-button");
+  for (i = 0; i < tabbuttons.length; i++) {
+    tabbuttons[i].classList.remove("active");
+  }
+  document.getElementById(tabName).classList.add("active");
+  evt.currentTarget.classList.add("active");
+}
+</script>
+
+</body>
+</html>
