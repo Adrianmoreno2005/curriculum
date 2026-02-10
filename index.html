@@ -165,6 +165,18 @@
       font-size: 18px;
     }
 
+    /* Estilo para el enlace de correo */
+    .email-link {
+      color: #003087;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .email-link:hover {
+      text-decoration: underline;
+      color: #0055cc;
+    }
+
     ul {
       padding-left: 20px;
       margin: 8px 0;
@@ -181,6 +193,7 @@
       .header { padding: 20px; text-align: center; }
       .header { flex-direction: column; }
       .foto { margin: 0 auto 15px; }
+      .email-link { color: #003087; text-decoration: underline; }
     }
   </style>
 </head>
@@ -212,7 +225,14 @@
     <table>
       <tr><th>Nombre</th><td>ADRIÁN MORENO MORENO</td></tr>
       <tr><th>Teléfono</th><td>+34 635 836 593</td></tr>
-      <tr><th>Correo electrónico</th><td>adriaanmoreno005@gmail.com</td></tr>
+      <tr>
+        <th>Correo electrónico</th>
+        <td>
+          <a href="mailto:adriaanmoreno005@gmail.com" class="email-link">
+            adriaanmoreno005@gmail.com
+          </a>
+        </td>
+      </tr>
     </table>
 
     <h3>Actividades e Intereses</h3>
