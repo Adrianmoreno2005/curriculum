@@ -22,11 +22,10 @@
       border-radius: 8px;
       overflow: hidden;
     }
-
-    /* Header */
+    /* Header con botón a la derecha */
     .header {
-      background: #dde6f2;
-      color: #1a2a44;
+      background: #003087;
+      color: white;
       padding: 30px 40px;
       display: flex;
       align-items: center;
@@ -57,15 +56,14 @@
       opacity: 0.95;
       margin: 0;
     }
-
-    /* Botón PDF */
+    /* Botón de descarga PDF - posicionado a la derecha */
     .download-pdf-btn {
       position: absolute;
       top: 30px;
       right: 40px;
-      background: rgba(0, 0, 0, 0.07);
-      color: #1a2a44;
-      border: 1px solid rgba(0, 0, 0, 0.15);
+      background: rgba(255, 255, 255, 0.18);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.4);
       padding: 10px 18px;
       font-size: 15px;
       font-weight: 600;
@@ -75,16 +73,15 @@
       transition: all 0.25s ease;
     }
     .download-pdf-btn:hover {
-      background: rgba(0, 0, 0, 0.12);
-      border-color: #1a2a44;
+      background: rgba(255, 255, 255, 0.35);
+      border-color: white;
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     .download-pdf-btn:active {
       transform: translateY(0);
     }
-
-    /* Responsive móvil */
+    /* Versión móvil */
     @media (max-width: 720px) {
       .header {
         flex-direction: column;
@@ -118,8 +115,7 @@
         padding: 20px 25px;
       }
     }
-
-    /* Tabs */
+    /* Tabs y tablas */
     .tabs {
       display: flex;
       background: #e9ecef;
@@ -140,11 +136,9 @@
     }
     .tab-button.active {
       background: white;
-      border-bottom: 3px solid #dde6f2;
-      color: #4a6fa5;
+      border-bottom: 3px solid #003087;
+      color: #003087;
     }
-
-    /* Contenido */
     .tab-content {
       padding: 30px 40px;
       display: none;
@@ -152,8 +146,6 @@
     .tab-content.active {
       display: block;
     }
-
-    /* Tablas */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -165,53 +157,40 @@
       text-align: left;
     }
     th {
-      background: #dde6f2;
-      color: #1a2a44;
+      background: #003087;
+      color: white;
       font-weight: bold;
     }
     tr:nth-child(even) {
       background: #f8f9fa;
     }
-
-    /* Títulos de sección */
     h3 {
-      color: #4a6fa5;
+      color: #003087;
       margin: 28px 0 12px;
-      border-bottom: 2px solid #dde6f2;
+      border-bottom: 2px solid #003087;
       padding-bottom: 6px;
       font-size: 18px;
     }
-
-    /* Enlaces en tabla */
     .contact-link-table {
-      color: #4a6fa5;
+      color: #003087;
       text-decoration: none;
       font-weight: bold;
     }
     .contact-link-table:hover {
       text-decoration: underline;
-      color: #2c5aa0;
+      color: #0055cc;
     }
-
-    /* Estilos para impresión */
     @media print {
       .tabs, .tab-button, .download-pdf-btn { display: none !important; }
       .tab-content { display: block !important; }
-      body { background: white; padding: 0; margin: 0; }
-      .container { box-shadow: none; border-radius: 0; max-width: 100%; }
-      .header {
-        padding: 20px;
-        text-align: center;
-        flex-direction: column;
-        background: #dde6f2;
-      }
+      body { background: white; padding: 0; }
+      .header { padding: 20px; text-align: center; flex-direction: column; }
       .foto { margin: 0 auto 15px; }
-      .contact-link-table { color: #4a6fa5; text-decoration: underline; }
+      .contact-link-table { color: #003087; text-decoration: underline; }
     }
   </style>
 </head>
 <body>
-
 <div class="container">
   <div class="header">
     <div class="foto-container">
@@ -224,20 +203,19 @@
       <h1>ADRIÁN MORENO MORENO</h1>
       <div class="titulo">PROFESIONAL DE ADMINISTRACIÓN Y MANTENIMIENTO DE SISTEMAS</div>
     </div>
+    <!-- Botón de descarga del PDF (enlace directo al raw de GitHub) -->
     <a href="https://github.com/Adrianmoreno2005/curriculum/raw/5c58cc48b5995d4dfb2ca3a74e5a5c6837a705d4/Curri%CC%81culum%20Adria%CC%81n%20Moreno%20Moreno.pdf"
        download="Currículum Adrián Moreno Moreno.pdf"
        class="download-pdf-btn">
        Descargar PDF
     </a>
   </div>
-
   <div class="tabs">
     <button class="tab-button active" onclick="openTab(event, 'personales')">Datos Personales</button>
     <button class="tab-button" onclick="openTab(event, 'experiencia')">Experiencia</button>
     <button class="tab-button" onclick="openTab(event, 'formacion')">Formación</button>
     <button class="tab-button" onclick="openTab(event, 'aptitudes')">Aptitudes</button>
   </div>
-
   <!-- Pestaña 1: Datos Personales -->
   <div id="personales" class="tab-content active">
     <h3>Datos Personales y Contacto</h3>
@@ -245,14 +223,19 @@
       <tr><th>Nombre</th><td>ADRIÁN MORENO MORENO</td></tr>
       <tr>
         <th>Teléfono</th>
-        <td><a href="tel:+34635836593" class="contact-link-table">+34 635 836 593</a></td>
+        <td>
+          <a href="tel:+34635836593" class="contact-link-table">+34 635 836 593</a>
+        </td>
       </tr>
       <tr>
         <th>Correo electrónico</th>
-        <td><a href="mailto:adriaanmoreno005@gmail.com" class="contact-link-table">adriaanmoreno005@gmail.com</a></td>
+        <td>
+          <a href="mailto:adriaanmoreno005@gmail.com" class="contact-link-table">
+            adriaanmoreno005@gmail.com
+          </a>
+        </td>
       </tr>
     </table>
-
     <h3>Actividades e Intereses</h3>
     <table>
       <tr><td>• Word, Excel, PowerPoint</td></tr>
@@ -260,7 +243,6 @@
       <tr><td>• Active Directory (AD)</td></tr>
       <tr><td>• Ubuntu</td></tr>
     </table>
-
     <h3>Competencias para el empleo</h3>
     <table>
       <tr><td>• Gestión de datos</td></tr>
@@ -272,7 +254,6 @@
       <tr><td>• Excelente comunicador, por escrito y oralmente</td></tr>
       <tr><td>• Creatividad con las aplicaciones ofimáticas</td></tr>
     </table>
-
     <h3>Otros datos</h3>
     <table>
       <tr><td>• Permiso de conducir (B)</td></tr>
@@ -280,7 +261,6 @@
       <tr><td>• Inscrito en el sistema de garantía juvenil</td></tr>
     </table>
   </div>
-
   <!-- Pestaña 2: Experiencia -->
   <div id="experiencia" class="tab-content">
     <h3>Experiencia Profesional</h3>
@@ -322,7 +302,6 @@
       </tr>
     </table>
   </div>
-
   <!-- Pestaña 3: Formación -->
   <div id="formacion" class="tab-content">
     <h3>Formación Académica</h3>
@@ -344,7 +323,6 @@
       </tr>
     </table>
   </div>
-
   <!-- Pestaña 4: Aptitudes -->
   <div id="aptitudes" class="tab-content">
     <h3>Aptitudes y Competencias</h3>
@@ -364,7 +342,6 @@
     </table>
   </div>
 </div>
-
 <script>
 function openTab(evt, tabName) {
   var i, tabcontent, tabbuttons;
@@ -380,6 +357,5 @@ function openTab(evt, tabName) {
   evt.currentTarget.classList.add("active");
 }
 </script>
-
 </body>
 </html>
