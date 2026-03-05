@@ -114,6 +114,9 @@
       .tab-content {
         padding: 20px 25px;
       }
+      .table-container {
+        overflow-x: auto;
+      }
     }
     @media (max-width: 480px) {
       .tabs {
@@ -130,6 +133,9 @@
       }
       th, td {
         padding: 8px 10px;
+      }
+      .table-container {
+        overflow-x: auto;
       }
     }
     /* Tabs y tablas */
@@ -238,136 +244,150 @@
   <!-- Pestaña 1: Datos Personales -->
   <div id="personales" class="tab-content active">
     <h3>Datos Personales y Contacto</h3>
-    <table>
-      <tr><th>Nombre</th><td>ADRIÁN MORENO MORENO</td></tr>
-      <tr>
-        <th>Teléfono</th>
-        <td>
-          <a href="tel:+34635836593" class="contact-link-table">+34 635 836 593</a>
-        </td>
-      </tr>
-      <tr>
-        <th>Correo electrónico</th>
-        <td>
-          <a href="mailto:adriaanmoreno05@gmail.com" class="contact-link-table">
-            adriaanmoreno05@gmail.com
-          </a>
-        </td>
-      </tr>
-    </table>
+    <div class="table-container">
+      <table>
+        <tr><th>Nombre</th><td>ADRIÁN MORENO MORENO</td></tr>
+        <tr>
+          <th>Teléfono</th>
+          <td>
+            <a href="tel:+34635836593" class="contact-link-table">+34 635 836 593</a>
+          </td>
+        </tr>
+        <tr>
+          <th>Correo electrónico</th>
+          <td>
+            <a href="mailto:adriaanmoreno05@gmail.com" class="contact-link-table">
+              adriaanmoreno05@gmail.com
+            </a>
+          </td>
+        </tr>
+      </table>
+    </div>
     <h3>Actividades e Intereses</h3>
-    <table>
-      <tr><td>• Word, Excel, PowerPoint</td></tr>
-      <tr><td>• Windows 7/10/11</td></tr>
-      <tr><td>• Active Directory (AD)</td></tr>
-      <tr><td>• Ubuntu</td></tr>
-    </table>
+    <div class="table-container">
+      <table>
+        <tr><td>• Word, Excel, PowerPoint</td></tr>
+        <tr><td>• Windows 7/10/11</td></tr>
+        <tr><td>• Active Directory (AD)</td></tr>
+        <tr><td>• Ubuntu</td></tr>
+      </table>
+    </div>
     <h3>Competencias para el empleo</h3>
-    <table>
-      <tr><td>• Gestión de datos</td></tr>
-      <tr><td>• Escucha activa</td></tr>
-      <tr><td>• Agradable, amable y orientado al servicio</td></tr>
-      <tr><td>• Formación y orientación del personal</td></tr>
-      <tr><td>• Ayudar a los demás trabajadores</td></tr>
-      <tr><td>• Control de calidad</td></tr>
-      <tr><td>• Excelente comunicador, por escrito y oralmente</td></tr>
-      <tr><td>• Creatividad con las aplicaciones ofimáticas</td></tr>
-    </table>
+    <div class="table-container">
+      <table>
+        <tr><td>• Gestión de datos</td></tr>
+        <tr><td>• Escucha activa</td></tr>
+        <tr><td>• Agradable, amable y orientado al servicio</td></tr>
+        <tr><td>• Formación y orientación del personal</td></tr>
+        <tr><td>• Ayudar a los demás trabajadores</td></tr>
+        <tr><td>• Control de calidad</td></tr>
+        <tr><td>• Excelente comunicador, por escrito y oralmente</td></tr>
+        <tr><td>• Creatividad con las aplicaciones ofimáticas</td></tr>
+      </table>
+    </div>
     <h3>Otros datos</h3>
-    <table>
-      <tr><td>• Permiso de conducir (B)</td></tr>
-      <tr><td>• Flexibilidad horaria</td></tr>
-      <tr><td>• Inscrito en el sistema de garantía juvenil</td></tr>
-    </table>
+    <div class="table-container">
+      <table>
+        <tr><td>• Permiso de conducir (B)</td></tr>
+        <tr><td>• Flexibilidad horaria</td></tr>
+        <tr><td>• Inscrito en el sistema de garantía juvenil</td></tr>
+      </table>
+    </div>
   </div>
   <!-- Pestaña 2: Experiencia -->
   <div id="experiencia" class="tab-content">
     <h3>Experiencia Profesional</h3>
-    <table>
-      <tr>
-        <th>Puesto</th>
-        <th>Empresa / Lugar</th>
-        <th>Responsabilidades principales</th>
-      </tr>
-      <tr>
-        <td>Técnico de Soporte CAU</td>
-        <td>Ayesa – Sevilla</td>
-        <td>
-          • Gestión de incidencias mediante ticketing con la aplicación Remedy en el CAU de Justicia<br>
-          • Administración y manejo de Active Directory<br>
-          • Proporcionar asistencia remota a usuarios
-        </td>
-      </tr>
-      <tr>
-        <td>Técnico de Sistemas y Redes</td>
-        <td>CATEC – Centro Avanzado de Tecnologías Aeroespaciales – Sevilla</td>
-        <td>
-          • Administración de red corporativa basada en Active Directory (AD)<br>
-          • Gestión avanzada de servicios DHCP, DNS, unión al dominio y políticas de grupo (GPO)<br>
-          • Soporte técnico nivel 1 y 2 (presencial y remoto) en hardware y software<br>
-          • Mantenimiento preventivo y correctivo de estaciones de trabajo, servidores y periféricos
-        </td>
-      </tr>
-      <tr>
-        <td>Técnico de reparación y soporte informático</td>
-        <td>BEEP Informática – Sevilla</td>
-        <td>
-          • Diagnóstico y reparación de equipos informáticos (PC, portátiles e impresoras) a nivel hardware y software<br>
-          • Instalación y configuración de sistemas operativos Windows y recuperación de datos<br>
-          • Atención al cliente, gestión de órdenes de reparación y control de stock<br>
-          • Organización administrativa y documentación de clientes
-        </td>
-      </tr>
-      <tr>
-        <td>Técnico informático y administrativo</td>
-        <td>R.P. Multiservicios – Sevilla</td>
-        <td>
-          • Diseño y mantenimiento de bases de datos en Microsoft Access<br>
-          • Creación de informes avanzados, tablas dinámicas y macros en Microsoft Excel<br>
-          • Elaboración de documentación profesional en Microsoft Word<br>
-          • Instalación y configuración de sistemas operativos Windows 7/10/11 y Ubuntu/Linux
-        </td>
-      </tr>
-    </table>
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Puesto</th>
+          <th>Empresa / Lugar</th>
+          <th>Responsabilidades principales</th>
+        </tr>
+        <tr>
+          <td>Técnico de Soporte CAU</td>
+          <td>Ayesa – Sevilla</td>
+          <td>
+            • Gestión de incidencias mediante ticketing con la aplicación Remedy en el CAU de Justicia<br>
+            • Administración y manejo de Active Directory<br>
+            • Proporcionar asistencia remota a usuarios
+          </td>
+        </tr>
+        <tr>
+          <td>Técnico de Sistemas y Redes</td>
+          <td>CATEC – Centro Avanzado de Tecnologías Aeroespaciales – Sevilla</td>
+          <td>
+            • Administración de red corporativa basada en Active Directory (AD)<br>
+            • Gestión avanzada de servicios DHCP, DNS, unión al dominio y políticas de grupo (GPO)<br>
+            • Soporte técnico nivel 1 y 2 (presencial y remoto) en hardware y software<br>
+            • Mantenimiento preventivo y correctivo de estaciones de trabajo, servidores y periféricos
+          </td>
+        </tr>
+        <tr>
+          <td>Técnico de reparación y soporte informático</td>
+          <td>BEEP Informática – Sevilla</td>
+          <td>
+            • Diagnóstico y reparación de equipos informáticos (PC, portátiles e impresoras) a nivel hardware y software<br>
+            • Instalación y configuración de sistemas operativos Windows y recuperación de datos<br>
+            • Atención al cliente, gestión de órdenes de reparación y control de stock<br>
+            • Organización administrativa y documentación de clientes
+          </td>
+        </tr>
+        <tr>
+          <td>Técnico informático y administrativo</td>
+          <td>R.P. Multiservicios – Sevilla</td>
+          <td>
+            • Diseño y mantenimiento de bases de datos en Microsoft Access<br>
+            • Creación de informes avanzados, tablas dinámicas y macros en Microsoft Excel<br>
+            • Elaboración de documentación profesional en Microsoft Word<br>
+            • Instalación y configuración de sistemas operativos Windows 7/10/11 y Ubuntu/Linux
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
   <!-- Pestaña 3: Formación -->
   <div id="formacion" class="tab-content">
     <h3>Formación Académica</h3>
-    <table>
-      <tr>
-        <th>Título</th>
-        <th>Centro</th>
-        <th>Año</th>
-      </tr>
-      <tr>
-        <td>Técnico Superior en Administración de Sistemas Informáticos en Red</td>
-        <td>I.E.S. Triana</td>
-        <td>2025</td>
-      </tr>
-      <tr>
-        <td>Técnico en Sistemas Microinformáticos y Redes</td>
-        <td>I.E.S. Alixar</td>
-        <td>2023</td>
-      </tr>
-    </table>
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Título</th>
+          <th>Centro</th>
+          <th>Año</th>
+        </tr>
+        <tr>
+          <td>Técnico Superior en Administración de Sistemas Informáticos en Red</td>
+          <td>I.E.S. Triana</td>
+          <td>2025</td>
+        </tr>
+        <tr>
+          <td>Técnico en Sistemas Microinformáticos y Redes</td>
+          <td>I.E.S. Alixar</td>
+          <td>2023</td>
+        </tr>
+      </table>
+    </div>
   </div>
   <!-- Pestaña 4: Aptitudes -->
   <div id="aptitudes" class="tab-content">
     <h3>Aptitudes y Competencias</h3>
-    <table>
-      <tr><td>• Gestión de datos</td></tr>
-      <tr><td>• Escucha activa</td></tr>
-      <tr><td>• Agradable, amable y orientado al servicio</td></tr>
-      <tr><td>• Formación y orientación del personal</td></tr>
-      <tr><td>• Ayudar a los demás trabajadores</td></tr>
-      <tr><td>• Control de calidad</td></tr>
-      <tr><td>• Excelente comunicador, por escrito y oralmente</td></tr>
-      <tr><td>• Creatividad con las aplicaciones ofimáticas</td></tr>
-      <tr><td>• Word, Excel, PowerPoint</td></tr>
-      <tr><td>• Windows 7/10/11</td></tr>
-      <tr><td>• Active Directory (AD)</td></tr>
-      <tr><td>• Ubuntu</td></tr>
-    </table>
+    <div class="table-container">
+      <table>
+        <tr><td>• Gestión de datos</td></tr>
+        <tr><td>• Escucha activa</td></tr>
+        <tr><td>• Agradable, amable y orientado al servicio</td></tr>
+        <tr><td>• Formación y orientación del personal</td></tr>
+        <tr><td>• Ayudar a los demás trabajadores</td></tr>
+        <tr><td>• Control de calidad</td></tr>
+        <tr><td>• Excelente comunicador, por escrito y oralmente</td></tr>
+        <tr><td>• Creatividad con las aplicaciones ofimáticas</td></tr>
+        <tr><td>• Word, Excel, PowerPoint</td></tr>
+        <tr><td>• Windows 7/10/11</td></tr>
+        <tr><td>• Active Directory (AD)</td></tr>
+        <tr><td>• Ubuntu</td></tr>
+      </table>
+    </div>
   </div>
 </div>
 <script>
